@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!--整体显示布局必须用scrollView包裹
+      每个需要最后停留在顶部的view的高度，必须是总体布局高度减去编辑界面布局高度
+    -->
+    <ScrollView
+        android:id="@+id/normal_mode_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/scrollview_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="16dip">
+
+            <LinearLayout
+                android:id="@+id/first_group_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+          <!--需要最后停留在顶部的view-->
+                <LinearLayout
+                    android:id="@+id/localfrom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/view_height"
+                    android:padding="3dip"
+                    android:gravity="left|center" >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search_outward"
+                        android:layout_marginLeft="10dip"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="localFrom"
+                        android:textSize="16dip"
+                        android:id="@+id/text_localfrom"
+                        android:layout_marginLeft="15dip"
+                        />
+                </LinearLayout>
+                <View
+                    android:background="#e6e6e6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px" />
+                <!--需要最后停留在顶部的view-->
+                <LinearLayout
+                    android:id="@+id/localto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/view_height"
+                    android:padding="3dip"
+                    android:gravity="left|center" >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search_inward"
+                        android:layout_marginLeft="10dip"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="localTo"
+                        android:id="@+id/text_localto"
+                        android:textSize="16dip"
+                        android:layout_marginLeft="15dip"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/first_spacer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#f3f3f3">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dip"
+                    android:layout_gravity="top"
+                    android:background="@drawable/divider_section_bottom"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/second_group_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+                <!--需要最后停留在顶部的view-->
+                <LinearLayout
+                    android:id="@+id/datefrom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/view_height"
+                    android:padding="3dip"
+                    android:gravity="left|center" >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search_outward"
+                        android:layout_marginLeft="10dip"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dateFrom"
+                        android:id="@+id/text_datefrom"
+                        android:textSize="16dip"
+                        android:layout_marginLeft="15dip"
+                        />
+                </LinearLayout>
+                <View
+                    android:background="#e6e6e6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px" />
+                <!--需要最后停留在顶部的view-->
+                <LinearLayout
+                    android:id="@+id/dateto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/view_height"
+                    android:padding="3dip"
+                    android:gravity="left|center" >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search_inward"
+                        android:layout_marginLeft="10dip"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dateTo"
+                        android:id="@+id/text_dateto"
+                        android:textSize="16dip"
+                        android:layout_marginLeft="15dip"
+                        />
+                </LinearLayout>
+                <View
+                    android:background="#e6e6e6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/third_group_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="50dip"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="300dip"
+                    android:layout_height="@dimen/view_height"
+                    android:background="@drawable/btn_green_normal"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center"
+                    android:text="Searth"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+   <!--编辑界面的布局一般不需要再此填充数据，只需要用fragment
+       填充该frameLayout即可，初始设置时，该fragmentLayout必须gone
+       -->
+    <FrameLayout
+        android:id="@+id/edit_mode_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="@dimen/view_height"
+        android:visibility="invisible">
+        <FrameLayout
+            android:id="@+id/edit_mode_fragment_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+         <include layout="@layout/fragment_edit"/>
+    </FrameLayout>
+    </FrameLayout>
+
+</RelativeLayout>

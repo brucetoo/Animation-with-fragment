@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionModeCloseButtonStyle">@style/NoCloseButton</item>
+    </style>
+
+    <style name="NoCloseButton" parent="@android:style/Widget.ActionButton.CloseMode">
+        <item name="android:visibility">gone</item>
+    </style>
+</resources>

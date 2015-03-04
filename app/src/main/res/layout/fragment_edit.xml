@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:background="@android:color/holo_blue_bright">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/view_height"
+        android:text="Today"
+        android:textSize="16dip"
+        android:id="@+id/today"
+        android:gravity="center"
+        android:layout_marginLeft="15dip" />
+
+    <View
+        android:background="#e6e6e6"
+        android:layout_width="fill_parent"
+        android:layout_height="1px" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/tomorrow"
+        android:layout_height="@dimen/view_height"
+        android:text="Tomorrow"
+        android:textSize="16dip"
+        android:gravity="center"
+        android:layout_marginLeft="15dip" />
+
+    <View
+        android:background="#e6e6e6"
+        android:layout_width="fill_parent"
+        android:layout_height="1px" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/third"
+        android:layout_height="@dimen/view_height"
+        android:text="The day after tomorrow"
+        android:gravity="center"
+        android:textSize="16dip"
+        android:layout_marginLeft="15dip" />
+</LinearLayout>
