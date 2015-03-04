@@ -5,7 +5,7 @@ I add click listener in "editmode",and  handle bugs when Double clicking sticky 
 ![](app/1.gif)
 
 
-See [sample details](http://www.cyrilmottier.com/2014/05/20/custom-animations-with-fragments) for more details.
+See [Sample](http://www.cyrilmottier.com/2014/05/20/custom-animations-with-fragments) for more details.
 
 
 ## Credits
